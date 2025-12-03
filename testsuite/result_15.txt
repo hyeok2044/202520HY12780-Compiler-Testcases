@@ -1,0 +1,3 @@
+
+C-MINUS COMPILATION: testsuite/test_15.cm
+Error: The void-type variable is declared at line 3 (name : "x")

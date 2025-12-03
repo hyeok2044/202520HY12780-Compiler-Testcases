@@ -1,0 +1,17 @@
+/* Redeclaring some functions - note that error output might be different */
+/* depending on implementation.  */
+int func1(int c[]){
+  return c; /* error should not be able to return the array */ 
+}
+
+/* error */ 
+int func1;
+
+int func1(int a, int b){
+  return a + b;
+}
+
+int main (void)
+{
+  int func1;
+}

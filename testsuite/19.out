@@ -1,0 +1,7 @@
+
+C-MINUS COMPILATION: testsuite/test_19.cm
+Error: Invalid function call at line 16 (name : "paramChk")
+Error: Invalid function call at line 17 (name : "paramChk")
+Error: Invalid function call at line 18 (name : "paramChk")
+Error: invalid operation at line 19
+Error: Invalid function call at line 19 (name : "paramChk")

@@ -1,0 +1,110 @@
+void voidFunc(void)
+{
+	return;
+}
+
+int intFunc(void)
+{
+	return 1;
+}
+
+void voidFuncReturningInt1(int intParam1)
+{
+	return 0; /* 13. error. void function returns something. */
+}
+
+void voidFuncReturningInt2(int intParam1)
+{
+	return intParam1; /* 18. error. void function returns something. */
+}
+
+void voidFuncReturningUndefined(void voidParam1)
+{
+	return voidParam1; /* 23. error. void function returns something. */
+}
+
+void voidFuncReturningArray(int intParam1[])
+{
+	return intParam1; /* 28. error. void function returns something. */
+}
+
+void voidFuncReturningIndices(int intParam1[])
+{
+	return intParam1[0]; /* 33. error. void function returns something. */
+}
+
+void voidFuncReturningUndefinedIndices(int intParam1[])
+{
+	return intParam1[intParam1]; /* 38. error. void function returns something. */
+}
+
+void voidFuncReturningIntFunction(int intParam1)
+{
+	return intFunc; /* 43. error. void function returns something. */
+}
+
+void voidFuncReturningIntFunctionVal(int intParam1)
+{
+	return intFunc(); /* 48. error. void function returns something. */
+}
+
+int intFuncReturningUndefinedIndices(int intParam1[])
+{
+	return intParam1[intParam1]; /* 53. error. but gray area as well. */
+	/* indice error but not return error? */
+}
+
+int intFuncReturningIntFunction(int intParam1)
+{
+	return intFunc; /* 59. error. function return. */
+}
+
+int intFuncReturningUndefined(void voidParam1)
+{
+	return voidParam1; /* 64. error. type error */
+}
+
+int intFuncReturningArray(int intParam1[])
+{
+	return intParam1; /* 69. error. array return. */
+}
+
+int intFuncReturnPreDefinedInt(int intParam1)
+{
+  return predefinedInt; /* 74. error. Undefined return */
+}
+
+int intFuncReturnPreDefinedIntFunc(int intParam1)
+{
+  return predefinedIntFunc(); /* 79. error. Undefined return */
+}
+
+int intFuncReturningInt1(int intParam1)
+{
+	return 0; /* 84. success. */
+}
+
+int intFuncReturningInt2(int intParam1)
+{
+	return intParam1; /* 89. success. */
+}
+
+int intFuncReturningIndices(int intParam1[])
+{
+	return intParam1[0]; /* 94. success. */
+}
+
+int intFuncReturningIntFunctionVal(int intParam1)
+{
+	return intFunc(); /* 99. success. */
+}
+
+int main(void)
+{
+	return 1;
+}
+
+int predefinedInt;
+int predefinedIntFunc(void){
+  return 1;
+}

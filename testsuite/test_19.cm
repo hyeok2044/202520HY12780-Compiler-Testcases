@@ -1,0 +1,22 @@
+void paramChk(int a, int b[])
+{
+  a;
+  b = b;
+}
+
+int main (void)
+{
+  int a;
+  int b[5];
+  /* should be successful */
+  paramChk(a, b);
+  paramChk(b[4], b);
+
+  /* should be error */
+  paramChk(a, a); 
+  paramChk(b, a);
+  paramChk(b, b);
+  paramChk(b, b+b);
+  return 0;
+}
+

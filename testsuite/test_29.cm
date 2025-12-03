@@ -1,0 +1,25 @@
+int intFunctionVoidReturn(int a)
+{
+	return; /* 3. error occurred */
+}
+
+void voidFunctionVoidReturn(int a)
+{
+	return; /* 8. success */
+}
+
+int intFunctionVoidFunctionReturn(int a)
+{
+	return intFunctionVoidReturn(a); /* 13. success (only error on 3) */
+}
+
+void voidFunctionReturn(int a)
+{
+	a = 1;
+	return voidFunctionVoidReturn(a); /* 19. error */
+}
+
+void func(void a)
+{
+  return;
+}

@@ -1,0 +1,30 @@
+/* Function call Testcases */
+int function(int a, int b[], int c, int d[]){
+	return a + b[1] + c + d[2] + function(a, b, c, d);
+}
+
+void voidFunction(void){
+	return;
+}
+
+int intFunction(void){
+	return 0;
+}
+
+int main(void){
+	int i;
+	int arr[5];
+	/* error */
+	function(i,i,i,i);
+	function(arr, arr, arr, arr);
+	function(voidFunction(), voidFunction(), voidFunction(), voidFunction());
+	function(intFunction(), intFunction(), intFunction(), intFunction());
+	function(1, arr, 2, arr, 3);
+	function(1, arr, 2);
+	function();
+	
+	/* success */
+	function(1, arr, 2, arr);
+	function(i, arr, i, arr);
+	function(arr[i], arr, intFunction(), arr);
+}

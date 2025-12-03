@@ -1,0 +1,6 @@
+
+C-MINUS COMPILATION: testsuite/test_33.cm
+Error: Symbol "output" is redefined at line 21 (already defined at line 0)
+Error: Symbol "input" is redefined at line 26 (already defined at line 0)
+Error: Invalid function call at line 35 (name : "zero")
+Error: undeclared variable "blockOnly" is used at line 40

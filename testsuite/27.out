@@ -1,0 +1,21 @@
+
+C-MINUS COMPILATION: testsuite/test_27.cm
+Error: The void-type variable is declared at line 21 (name : "voidParam1")
+Error: The void-type variable is declared at line 62 (name : "voidParam1")
+Error: Invalid return at line 13
+Error: Invalid return at line 18
+Error: Invalid return at line 23
+Error: Invalid return at line 28
+Error: Invalid return at line 33
+Error: Invalid array indexing at line 38 (name : "intParam1"). indicies should be integer
+Error: Invalid return at line 38
+Error: Invalid return at line 43
+Error: Invalid return at line 48
+Error: Invalid array indexing at line 53 (name : "intParam1"). indicies should be integer
+Error: Invalid return at line 53
+Error: Invalid return at line 59
+Error: Invalid return at line 64
+Error: Invalid return at line 69
+Error: Invalid return at line 74
+Error: Function "predefinedIntFunc" is used before declaration at line 79
+Error: Invalid return at line 79

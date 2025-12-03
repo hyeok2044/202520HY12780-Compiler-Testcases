@@ -1,0 +1,4 @@
+
+C-MINUS COMPILATION: testsuite/test_18.cm
+Error: Invalid function call at line 8 (name : "output")
+Error: Invalid return at line 8

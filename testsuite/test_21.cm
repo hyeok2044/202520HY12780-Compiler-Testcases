@@ -1,0 +1,44 @@
+/* Testing the assign. */
+int main (void)
+{
+  int val;
+  int arrayVal[5];
+  void voidVal;
+  void voidArray[5];
+
+  /* error */
+  val = arrayVal; 
+  val = voidVal;
+  val = voidArray;
+
+  arrayVal = val;
+  arrayVal = voidVal;
+  arrayVal = voidArray;
+  arrayVal = arrayVal[0];
+
+  arrayVal[0] = voidVal;
+  arrayVal[0] = voidArray;
+  arrayVal[0] = arrayVal;
+  arrayVal[0] = voidArray[0];
+
+  voidVal = val;
+  voidVal = arrayVal;
+  voidVal = voidArray;
+  voidVal = voidVal;
+  voidVal = arrayVal[0];
+
+  voidArray = val;
+  voidArray = arrayVal;
+  voidArray = voidVal;
+  voidArray = voidArray;
+  voidArray = voidArray[0];
+
+  /* success */
+  val = val;
+  arrayVal = arrayVal;
+  val = arrayVal[0];
+  arrayVal[0] = val;
+
+  return 0;
+}
+

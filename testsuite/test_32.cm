@@ -1,0 +1,60 @@
+int func(int param)
+{
+	return 1;
+}
+
+int main(void)
+{
+	int a;
+	int b;
+	int arr[5];
+	int x;
+	/* error */
+	x = func + 1;
+	x = func + 1 + 1 + func;
+	x = func == func;
+	x = arr + 1;
+	x = arr + arr[1];
+	arr = func;
+	arr = func + 1;
+	arr = func + func;
+	arr = func <= func;
+	
+	/* success */
+	x = a + b;
+	x = a - b;
+	x = a * b;
+	x = a / b;
+	x = a < b;
+	x = a > b;
+	x = a <= b;
+	x = a >= b;
+	x = a == b;
+	x = a != b;
+	
+	arr[1] = arr[1] + arr[1];
+	x = func(1) - arr[1];
+	x = arr[1] * arr[1];
+	arr[1] = arr[1] / arr[1];
+	arr[1] = arr[1] < arr[1];
+	arr[1] = arr[1] > arr[1];
+	arr[1] = arr[1] <= arr[1];
+	arr[1] = arr[1] >= arr[1];
+	arr[1] = arr[1] == arr[1];
+	arr[1] = arr[1] != arr[1];
+	
+	if(func(1) - func(2)){};
+	if(func(1) / func(2)){};
+	if(arr[arr[arr[arr[1]]]] <= (x >= func(3))){};
+	if(func(1) != (func(2) >= func(3))){};
+	
+	if(func(1) - func(2)){}else{};
+	if(func(1) / func(2)){}else{};
+	if((arr[arr[arr[arr[1]]]] <= x) >= func(3)){}else{};
+	if((func(1) != func(2)) >= func(3)){}else{};
+	
+	while(func(1) - func(2)){};
+	while(func(1) / func(2)){};
+	while(arr[arr[arr[arr[1]]]] <= (x + 1 >= func(3))){};
+	while(func(1) != (func(2) / 3 >= func(3))){};
+}

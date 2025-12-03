@@ -1,0 +1,9 @@
+int main (void)
+{
+  x(1, 2);
+
+  if(x()){}
+
+  return 0;
+}
+

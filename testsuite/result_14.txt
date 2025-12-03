@@ -1,0 +1,4 @@
+
+C-MINUS COMPILATION: testsuite/test_14.cm
+Error: invalid operation at line 6
+Error: invalid condition at line 8

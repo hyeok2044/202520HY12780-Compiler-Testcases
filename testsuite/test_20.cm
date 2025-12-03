@@ -1,0 +1,23 @@
+int d(void){
+  return input();
+}
+
+int c(void){
+  return d();
+}
+
+int b(void){
+  return c();
+}
+
+int a(void){
+  return b();
+}
+
+int main (void)
+{
+  int x;
+  x = a();
+  return 0;
+}
+

@@ -1,0 +1,10 @@
+/* syntax error. C-minus language does not support this. */
+int[] intArrFunc(int param1[])
+{
+	return param1;
+}
+
+int main(void)
+{
+	return 1;
+}

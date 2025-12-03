@@ -1,0 +1,9 @@
+/* later assignment */
+
+int main(void)
+{
+  a = 1; /* error */
+}
+
+int a;
+

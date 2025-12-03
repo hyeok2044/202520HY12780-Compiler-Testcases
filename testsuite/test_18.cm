@@ -1,0 +1,18 @@
+int returnint1(void)
+{
+  return input(); 
+}
+
+int returnint2(int a, int b[])
+{
+  return output(b); 
+}
+
+int main (void)
+{
+  int x;
+  int a;
+  int b[5];
+  return x + returnint1() + returnint2(a, b);
+}
+

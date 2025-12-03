@@ -1,0 +1,15 @@
+int returnint1(void)
+{
+  return input(); 
+}
+
+int main (void)
+{
+  int x;
+  return x + returnint1() + returnint2();
+}
+
+int returnint2(void)
+{
+  return input(); 
+}

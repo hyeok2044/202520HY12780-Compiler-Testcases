@@ -1,0 +1,19 @@
+int intFunc(void){
+  return 1;
+}
+
+/* Testing the assign. */
+int main (void)
+{
+  int val;
+  int arrayVal[5];
+
+  /* error */
+  arrayVal[arrayVal] = val;
+  arrayVal[intFunc] = val;
+  intFunc = val;
+  intFunc = arrayVal;
+  intFunc = arrayVal[0];
+  return 0;
+}
+

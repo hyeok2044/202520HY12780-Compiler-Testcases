@@ -1,0 +1,5 @@
+
+C-MINUS COMPILATION: testsuite/test_29.cm
+Error: Invalid return at line 3
+Error: Invalid return at line 19
+Error: The void-type variable is declared at line 22 (name : "a")

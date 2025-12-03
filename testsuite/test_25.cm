@@ -1,0 +1,63 @@
+/* testcase to check for the conditions.*/
+void voidFunction(void){
+	return;
+}
+
+int intFunction(void)
+{
+	return 0;
+}
+
+int intArr[5];
+int integer;
+int main(void)
+{
+	/* error Line 15.*/ 
+	if(lateDeclaration()){}
+	if(nonExistent){}
+	if(voidFunction()){}
+	if(voidFunction){}
+	if(intFunction){}
+	if(lateDeclaration){}
+	if(lateInteger1){}
+	if(intArr){}
+	
+	if(lateDeclaration()){}else{}
+	if(nonExistent2){}else{}
+	if(voidFunction()){}else{}
+	if(voidFunction){}else{}
+	if(intFunction){}else{}
+	if(lateDeclaration){}else{}
+	if(intArr){}else{}
+	if(lateInteger2){}else
+	
+	while(lateDeclaration()){}
+	while(nonExistent3){}
+	while(voidFunction()){}
+	while(voidFunction){}
+	while(intFunction){}
+	while(lateDeclaration){}
+	while(intArr){}
+	if(lateInteger3){}else
+	
+	if(intFunction[0]){}
+	if(nonExistent[0]){}
+	if(intFunction[intFunction]){}
+	/* gray line. this should cause an indice error */
+	/* but whether it being an condition error is unclear.*/
+	if(integer[0]){}
+	
+	/* success */
+	if(intArr[0]){}
+	if(intFunction()){}
+	if(intArr[0] / input()){}
+	if(lateInteger1){} /* should be okay due to redefinition */
+}
+
+int lateInteger1;
+int lateInteger2;
+int lateInteger3;
+int lateDeclaration(void)
+{
+	return 0;
+}

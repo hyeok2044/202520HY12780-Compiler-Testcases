@@ -1,0 +1,6 @@
+/* returning void */
+void main (void)
+{
+  return;
+}
+

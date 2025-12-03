@@ -1,0 +1,9 @@
+
+C-MINUS COMPILATION: testsuite/test_22.cm
+Error: Invalid array indexing at line 12 (name : "arrayVal"). indicies should be integer
+Error: invalid assignment at line 12
+Error: Invalid array indexing at line 13 (name : "arrayVal"). indicies should be integer
+Error: invalid assignment at line 13
+Error: invalid assignment at line 14
+Error: invalid assignment at line 15
+Error: invalid assignment at line 16

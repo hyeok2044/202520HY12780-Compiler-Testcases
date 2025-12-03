@@ -1,0 +1,5 @@
+
+C-MINUS COMPILATION: testsuite/test_8.cm
+Error: undeclared variable "x" is used at line 4
+Error: invalid operation at line 4
+Error: invalid operation at line 5

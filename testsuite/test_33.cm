@@ -1,0 +1,42 @@
+int zero(void)
+{
+  return 0;
+}
+
+int first(int data[])
+{
+  return data[0];
+}
+
+void scopedemo(void)
+{
+  int outer;
+  outer = 1;
+  {
+    int outer;
+    outer = outer + 2;
+  }
+}
+
+void output(void)
+{
+  return;
+}
+
+int input;
+
+void main(void)
+{
+  int arr[2];
+  arr[0] = 5;
+  scopedemo();
+  first(arr);
+  zero();
+  zero(1);
+  {
+    int blockOnly;
+    blockOnly = arr[0];
+  }
+  blockOnly;
+  return;
+}

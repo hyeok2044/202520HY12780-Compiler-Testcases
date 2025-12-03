@@ -1,0 +1,9 @@
+
+C-MINUS COMPILATION: testsuite/test_31.cm
+Error: Invalid function call at line 18 (name : "function")
+Error: Invalid function call at line 19 (name : "function")
+Error: Invalid function call at line 20 (name : "function")
+Error: Invalid function call at line 21 (name : "function")
+Error: Invalid function call at line 22 (name : "function")
+Error: Invalid function call at line 23 (name : "function")
+Error: Invalid function call at line 24 (name : "function")

@@ -1,0 +1,15 @@
+/* Testing the late function. */
+int main (void)
+{
+  globalInt = 1;
+  globalVoid = 1;
+  globalIntArr = globalIntArr;
+  globalVoidArr = globalVoidArr;
+  return 0;
+}
+
+int globalInt;
+void globalVoid;
+int globalIntArr[5];
+void globalVoidArr[5];
+

@@ -1,0 +1,6 @@
+
+C-MINUS COMPILATION: testsuite/test_11.cm
+Error: Symbol "y" is redefined at line 5 (already defined at line 4)
+Error: Symbol "y" is redefined at line 7 (already defined at line 4 5)
+Error: Symbol "abc" is redefined at line 17 (already defined at line 13)
+Error: Symbol "abc" is redefined at line 21 (already defined at line 13 17)
