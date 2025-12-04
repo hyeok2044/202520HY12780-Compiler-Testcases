@@ -27,19 +27,20 @@ int main(int argc, char **argv)
               i);
       system(cmd);
 
-      // 2-a) Sort 및 Diff 실행 (diff 결과를 ret에 저장)
-      sprintf(
-          cmd,
-          "sort testsuite/%d.out > testsuite/temp_current_%d.sorted && "
-          "sort testsuite/result_%d.txt > testsuite/temp_expect_%d.sorted && "
-          "diff testsuite/temp_current_%d.sorted "
-          "testsuite/temp_expect_%d.sorted",
-          i,
-          i,
-          i,
-          i,
-          i,
-          i);
+      // 2-a) Sort -u 및 Diff 실행 (diff 결과를 ret에 저장)
+      // NOTE: sort -u 를 사용하여 정렬과 동시에 중복 에러를 하나로 묶음
+      sprintf(cmd,
+              "sort -u testsuite/%d.out > testsuite/temp_current_%d.sorted && "
+              "sort -u testsuite/result_%d.txt > "
+              "testsuite/temp_expect_%d.sorted && "
+              "diff testsuite/temp_current_%d.sorted "
+              "testsuite/temp_expect_%d.sorted",
+              i,
+              i,
+              i,
+              i,
+              i,
+              i);
       ret = system(cmd);
 
       // 2-b) 임시 파일 정리 (ret 해석 전에 먼저 실행)
@@ -56,6 +57,7 @@ int main(int argc, char **argv)
         printf("SUCCESS: test_%d.cm passed.\n", i);
       } else if (ret == 256) { // == (1 << 8), 실제 diff exit 1
         printf("FAIL: test_%d.cm failed.\n", i);
+        // 실패 시에는 원본 파일 내용을 출력 (sort -u를 거치지 않은)
         sprintf(
             cmd,
             "echo expecting: && cat testsuite/result_%d.txt && echo current: "
@@ -79,11 +81,12 @@ int main(int argc, char **argv)
         cmd, "./cminus_semantic testsuite/test_%d.cm > testsuite/%d.out", i, i);
     system(cmd);
 
-    // Sort 및 Diff 실행
+    // Sort -u 및 Diff 실행
+    // NOTE: sort -u 를 사용하여 정렬과 동시에 중복 에러를 하나로 묶음
     sprintf(
         cmd,
-        "sort testsuite/%d.out > testsuite/temp_current_%d.sorted && "
-        "sort testsuite/result_%d.txt > testsuite/temp_expect_%d.sorted && "
+        "sort -u testsuite/%d.out > testsuite/temp_current_%d.sorted && "
+        "sort -u testsuite/result_%d.txt > testsuite/temp_expect_%d.sorted && "
         "diff testsuite/temp_current_%d.sorted testsuite/temp_expect_%d.sorted",
         i,
         i,
@@ -107,6 +110,7 @@ int main(int argc, char **argv)
       printf("SUCCESS: test_%d.cm passed.\n", i);
     } else if (ret == 256) { // == (1 << 8), 실제 diff exit 1
       printf("FAIL: test_%d.cm failed.\n", i);
+      // 실패 시에는 원본 파일 내용을 출력 (sort -u를 거치지 않은)
       sprintf(cmd,
               "echo expecting: && cat testsuite/result_%d.txt && echo current: "
               "&& cat testsuite/%d.out && cat "
