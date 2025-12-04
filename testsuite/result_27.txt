@@ -16,6 +16,7 @@ Error: Invalid return at line 53
 Error: Invalid return at line 59
 Error: Invalid return at line 64
 Error: Invalid return at line 69
+Error: undeclared variable "predefinedInt" is used at line 74
 Error: Invalid return at line 74
 Error: Function "predefinedIntFunc" is used before declaration at line 79
 Error: Invalid return at line 79

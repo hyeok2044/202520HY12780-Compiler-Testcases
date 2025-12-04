@@ -1,6 +1,0 @@
-
-C-MINUS COMPILATION: testsuite/test_9.cm
-Error: undeclared function "x" is called at line 3
-Error: Invalid function call at line 3 (name : "x")
-Error: Invalid function call at line 5 (name : "x")
-Error: invalid condition at line 5

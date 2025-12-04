@@ -1,5 +1,0 @@
-
-C-MINUS COMPILATION: testsuite/test_24.cm
-Error: Symbol "func1" is redefined at line 8 (already defined at line 3)
-Error: Symbol "func1" is redefined at line 10 (already defined at line 3 8)
-Error: Invalid return at line 4

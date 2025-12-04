@@ -7,7 +7,9 @@ Error: invalid condition at line 17
 Error: invalid condition at line 18
 Error: invalid condition at line 19
 Error: invalid condition at line 20
+Error: undeclared variable "lateDeclaration" is used at line 21
 Error: invalid condition at line 21
+Error: undeclared variable "lateInteger1" is used at line 22
 Error: invalid condition at line 22
 Error: invalid condition at line 23
 Error: Function "lateDeclaration" is used before declaration at line 25
@@ -17,8 +19,10 @@ Error: invalid condition at line 26
 Error: invalid condition at line 27
 Error: invalid condition at line 28
 Error: invalid condition at line 29
+Error: undeclared variable "lateDeclaration" is used at line 30
 Error: invalid condition at line 30
 Error: invalid condition at line 31
+Error: undeclared variable "lateInteger2" is used at line 32
 Error: Function "lateDeclaration" is used before declaration at line 34
 Error: invalid condition at line 34
 Error: invalid condition at line 34
@@ -27,8 +31,10 @@ Error: invalid condition at line 35
 Error: invalid condition at line 36
 Error: invalid condition at line 37
 Error: invalid condition at line 38
+Error: undeclared variable "lateDeclaration" is used at line 39
 Error: invalid condition at line 39
 Error: invalid condition at line 40
+Error: undeclared variable "lateInteger3" is used at line 41
 Error: Invalid array indexing at line 43 (name : "intFunction"). indexing can only be allowed for int[] variables
 Error: invalid condition at line 43
 Error: invalid condition at line 43

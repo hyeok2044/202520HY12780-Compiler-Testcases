@@ -1,4 +1,0 @@
-
-C-MINUS COMPILATION: testsuite/test_5.cm
-Error: undeclared variable "x" is used at line 3
-Error: Invalid return at line 3

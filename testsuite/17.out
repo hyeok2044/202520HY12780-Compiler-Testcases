@@ -1,5 +1,0 @@
-
-C-MINUS COMPILATION: testsuite/test_17.cm
-Error: Function "returnint2" is used before declaration at line 9
-Error: invalid operation at line 9
-Error: Invalid return at line 9

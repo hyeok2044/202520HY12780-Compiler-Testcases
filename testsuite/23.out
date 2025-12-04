@@ -1,8 +1,0 @@
-
-C-MINUS COMPILATION: testsuite/test_23.cm
-Error: The void-type variable is declared at line 12 (name : "globalVoid")
-Error: The void-type variable is declared at line 14 (name : "globalVoidArr")
-Error: invalid assignment at line 4
-Error: invalid assignment at line 5
-Error: invalid assignment at line 6
-Error: invalid assignment at line 7

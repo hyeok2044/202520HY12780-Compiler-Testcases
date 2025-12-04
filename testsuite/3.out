@@ -1,3 +1,0 @@
-
-C-MINUS COMPILATION: testsuite/test_3.cm
-Error: Invalid function call at line 12 (name : "x")

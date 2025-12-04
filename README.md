@@ -1,4 +1,7 @@
-# Readme
+
+# LAST EDIT: 2025-12-04 15:00
+
+(redownload if downloaded before)
 
 ## C-Minus Semantic Analysis Test cases
 
@@ -6,7 +9,7 @@
 
 ## Features
 
-This automatic testcase runner mainly uses sorted diff command.
+This automatic testcase runner mainly uses sorted diff + **unique** command.
 
 The program is expected to be executed within the docker container, ran with
 
@@ -14,7 +17,7 @@ The program is expected to be executed within the docker container, ran with
 docker run --name compiler2025 --rm -it -v "$PWD":/work -w /work cs-compiler-hw:1.0
 ```
 
-> Note that the ordering of the error messages are ignored.
+> Note that the ordering **and numbers** of the error messages are ignored.
 > 
 
 ## Using the Automatic Test Case Runner
@@ -104,3 +107,40 @@ This repository will be maintained until the project submission deadline.
     C-MINUS COMPILATION: testsuite/test_12.cm
     Error: invalid operation at line 6
     ```
+### Edit [2025-12-04 : 2]
+
+1. Modified the testcase runner to ignore the **number of the same error messages.**
+    
+    > Now, the testcase 12 will be marked correct before and after.
+    > 
+2. Critical bug of using later-defined variable was found.
+    
+    ```c
+    /* later assignment */
+    
+    int main(void)
+    {
+      a = 1; /* error */
+    }
+    
+    int a;
+    ```
+    
+    Testcases like this (test_30.cm) was not generating undeclared variable error.
+    
+    before:
+    
+    ```
+    C-MINUS COMPILATION: testsuite/test_30.cm
+    Error: invalid assignment at line 5
+    ```
+    
+    after:
+    
+    ```
+    C-MINUS COMPILATION: testsuite/test_30.cm
+    **Error: undeclared variable "a" is used at line 5**
+    Error: invalid assignment at line 5
+    ```
+    
+    Testcases 23, 25, 27, 30 are affected by this change.

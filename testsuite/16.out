@@ -1,5 +1,0 @@
-
-C-MINUS COMPILATION: testsuite/test_16.cm
-Error: Invalid array indexing at line 4 (name : "x"). indexing can only be allowed for int[] variables
-Error: Invalid function call at line 5 (name : "output")
-Error: invalid assignment at line 4

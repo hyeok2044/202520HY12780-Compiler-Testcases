@@ -2,7 +2,13 @@
 C-MINUS COMPILATION: testsuite/test_23.cm
 Error: The void-type variable is declared at line 12 (name : "globalVoid")
 Error: The void-type variable is declared at line 14 (name : "globalVoidArr")
+Error: undeclared variable "globalInt" is used at line 4
 Error: invalid assignment at line 4
+Error: undeclared variable "globalVoid" is used at line 5
 Error: invalid assignment at line 5
+Error: undeclared variable "globalIntArr" is used at line 6
+Error: undeclared variable "globalIntArr" is used at line 6
 Error: invalid assignment at line 6
+Error: undeclared variable "globalVoidArr" is used at line 7
+Error: undeclared variable "globalVoidArr" is used at line 7
 Error: invalid assignment at line 7

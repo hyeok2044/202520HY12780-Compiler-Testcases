@@ -1,3 +1,0 @@
-
-C-MINUS COMPILATION: testsuite/test_4.cm
-Error: Invalid array indexing at line 4 (name : "x"). indicies should be integer
