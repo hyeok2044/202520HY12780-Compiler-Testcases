@@ -83,3 +83,24 @@ I did not return invalid condition here.
 You can open the concerns on the issue tab of this repository.
 
 This repository will be maintained until the project submission deadline.
+
+---
+
+### Edit [2025-12-04 : 1]
+
+1. modified 12th testcase result.txt not representing the true result as a hot fix.
+    
+    before:
+    
+    ```python
+    C-MINUS COMPILATION: testsuite/test_12.cm
+    Error: invalid operation at line 6
+    Error: invalid operation at line 6
+    ```
+    
+    after:
+    
+    ```python
+    C-MINUS COMPILATION: testsuite/test_12.cm
+    Error: invalid operation at line 6
+    ```
